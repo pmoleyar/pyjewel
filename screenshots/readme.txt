@@ -1,1 +1,0 @@
-https://www.mobygames.com/game/112063/jewelbox/screenshots/
