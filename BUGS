@@ -1,0 +1,2 @@
+- Jewels start dropping even while flashing is going on, and game crashes. Check recent code changes.
+- High score view is consuming ~25% CPU time

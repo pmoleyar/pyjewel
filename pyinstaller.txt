@@ -1,0 +1,1 @@
+C:\Users\prabhanjan\AppData\Roaming\Python\Python38\Scripts\pyinstaller.exe pyjewel.py --onefile --add-data "resources;resources"
