@@ -142,6 +142,7 @@ class HscoreView(arcade.View):
         arcade.set_background_color(arcade.color.BLACK)
         self.init_vars()
         self.timer.reset()
+        self.timer.start()
 
     def timer_tick(self, delta_time):
         """Manage the hscore state machine"""

@@ -130,6 +130,7 @@ class IntroView(arcade.View):
         arcade.set_background_color(arcade.color.BLACK)
         self.init_vars()
         self.timer.reset()
+        self.timer.start()
 
     def timer_tick(self, delta_time: float):
         """Manage the intro state machine"""

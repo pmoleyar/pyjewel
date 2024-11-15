@@ -140,7 +140,6 @@ class Timer:
 
     def reset(self):
         self.elapsed_time = 0
-        self.active = True
 
     def stop(self):
         if self._debug: print('Timer stopped')
@@ -158,6 +157,7 @@ class Timer:
     def duration(self, new_duration):
         """Update timer duration"""
         self._duration = new_duration
+        self.elapsed_time = 0
 
 
 def key_handler(cview, key, modifiers):

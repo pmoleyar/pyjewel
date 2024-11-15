@@ -205,9 +205,9 @@ class GameView(arcade.View):
         self.fx_timer.reset()
         self.fx_timer.stop()
 
-        # Reset/start game timer with new speed
+        # Reset and start game timer
         self.game_timer.duration = self.speed
-        self.game_timer.reset()
+        self.game_timer.start()
 
     def toggle_pause(self):
         self.paused = not self.paused
@@ -223,9 +223,8 @@ class GameView(arcade.View):
         self.background.update()
         self.speed = self.speeds[self.stage]
 
-        # Reset timer with new speed
+        # Update timer with new speed
         self.game_timer.duration = self.speed
-        self.game_timer.reset()
 
     def decr_rest(self, val):
         self.rest -= val
@@ -256,7 +255,7 @@ class GameView(arcade.View):
         self.game_timer.stop()
 
         self.fx_fill = True
-        self.fx_timer.reset()
+        self.fx_timer.start()
 
         self.falling_block = self.preview_block
         arcade.schedule(self.end_game, 3*FLASH_DELAY) # enough delay for fx
@@ -304,8 +303,8 @@ class GameView(arcade.View):
             self.falling_block.ismoving = False # Disable response to keys
 
             # Enable effects, pause game
-            self.fx_timer.start()
             self.game_timer.stop()
+            self.fx_timer.start()
 
             # Add to fallen blocks
             self.fallen_jewels.extend(self.falling_block)
@@ -496,6 +495,7 @@ class GameView(arcade.View):
 
         match_jewels = [self.fallen_jewels.find(i[0], i[1]) \
                 for i in indices]
+        assert not self.flashing_jewels  # Must be empty at this point
         self.flashing_jewels.extend(match_jewels)
 
         # Schedule deletion
@@ -568,8 +568,8 @@ class GameView(arcade.View):
             # Can a new block be introduced?
             # ..No: trigger fill effect
             self.fx_fill = True
-            self.fx_timer.start()
             self.game_timer.stop()
+            self.fx_timer.start()
         else:
             # ..Yes: move preview block to board as a falling block
             self.falling_block = self.preview_block
