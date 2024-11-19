@@ -1,5 +1,8 @@
 # pyjewel
- A falling blocks game
+ A falling blocks game.
+ Ported to python by Prabhanjan M. from "xjewel" version 1.6 (1/29/93) By David Cooper and José Guterman.
+ 
+ Original README follows.
 
 ==============================================================================
 
@@ -53,6 +56,7 @@ There are three sets of keys that can be used:
 ( or any combination )
 
 Option 1:
+
          +---+ +---+ +---+
          | j | | k | | l |
          +---+ +---+ +---+
@@ -66,6 +70,7 @@ Option 1:
          +---------+
 
 Option 2:
+
          +---+ +---+ +---+
          | 4 | | 5 | | 6 |
          +---+ +---+ +---+
