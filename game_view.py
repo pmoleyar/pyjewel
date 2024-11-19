@@ -212,10 +212,8 @@ class GameView(arcade.View):
     def toggle_pause(self):
         self.paused = not self.paused
         if self.paused:
-            self.fx_timer.stop()
             self.game_timer.stop()
         else:
-            self.fx_timer.start()
             self.game_timer.start()
 
     def incr_stage(self):
@@ -516,7 +514,7 @@ class GameView(arcade.View):
             self.fx_timer.stop()
             if self.game_over:
                 self.end_game(0)
-            else:
+            elif not self.paused: 
                 self.game_timer.start()
 
     def delete_jewels(self, scoring, delta_time: float):
@@ -645,7 +643,7 @@ class GameView(arcade.View):
             self.move_left()
         elif key == arcade.key.RIGHT and not self.paused:
             self.move_right()
-        elif key == arcade.key.DOWN or key == arcade.key.SPACE and \
+        elif (key == arcade.key.DOWN or key == arcade.key.SPACE) and \
                 not self.paused:
             self.drop()
         elif key == arcade.key.E:
