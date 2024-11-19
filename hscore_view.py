@@ -1,59 +1,15 @@
-# ----------------------------------------------------------------------------
-# hscore_view.py
-#
-# Prabhanjan M. <prabhanjan@gmail.com>
-#
-# Date: 27 Feb, 2021
-# Last Change: 28 Sep, 2024
-#
-# Ported from xjewel Version 1.6 (1/29/93) by David Cooper and José Guterman
-# Bitmaps taken from xjewel
-# Originally written by Yoshihiro Satoh of HP.
-#
-# ORIGINAL NOTATIONS
-# ==================
-# > >Authors
-# > >-------
-# > >
-# > >   Programming       Yoshihiro Satoh
-# > >   Font Design       Yoshiharu Minami
-# > >   Document Writing  Nancy Paisner
-# > >
-# > >Copyright
-# > >---------
-# > >
-# > >  This software is in the Yoshihiro's Arcade Collections.
-# > >  Domain/JewelBox is a trade mark of Yoshihiro Satoh.
-# > >
-# > >  Copyright @ 1990 by Yoshihiro Satoh
-# > >  All rights are reserved by Yoshihiro Satoh.
-# 
-# > xjewel - Jewel for X11 Copyright 1992 by David Cooper
-# 
-# ----------------------------------------------------------------------------
-# Ported from xjewel Version 1.6 (1/29/93) by David Cooper and José Guterman
-# Bitmaps taken from xjewel
-# Originally written by Yoshihiro Satoh of HP.
-#
-#   Copyright (C) 2021  Prabhanjan M.
-#   Copyright is only on the code in this file.
-#   No claim is made to the bitmaps.
-#
-#   This program is free software; you can redistribute it and/or modify
-#   it under the terms of the GNU General Public License as published by
-#   the Free Software Foundation; either version 2 of the License, or
-#   (at your option) any later version.
-#
-#   This program is distributed in the hope that it will be useful,
-#   but WITHOUT ANY WARRANTY; without even the implied warranty of
-#   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#   GNU General Public License for more details.
-#
-#   You should have received a copy of the GNU General Public License
-#   along with this program; if not, write to the Free Software
-#   Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
-#
-# ----------------------------------------------------------------------------
+"""
+File:           hscore_view.py
+Description:    High Score view
+
+Author:         Prabhanjan M. <prabhanjan@gmail.com>
+Created:        27 Feb, 2021
+Last Modified:  
+
+Copyright:      (C) 2024, Prabhanjan M.
+License:        GPL (See LICENSE file for details)
+
+"""
 
 import arcade
 import os
